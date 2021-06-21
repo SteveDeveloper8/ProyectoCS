@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Trabajo
+    public class Trabajo : ActividadPractica
     {
+        public Trabajo(int id, string nombre, string descripcion) : base(id, nombre, descripcion)
+        {
+        }
     }
 }

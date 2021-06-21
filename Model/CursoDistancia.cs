@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class CursoDistancia
+    public class CursoDistancia : ActividadCurricular
     {
+        public CursoDistancia(int id, string nombre, string descripcion) : base(id, nombre, descripcion)
+        {
+        }
     }
 }

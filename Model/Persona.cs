@@ -8,6 +8,7 @@ namespace Model
 {
     public abstract class Persona
     {
+        private int id;
         private string codigo;
         private string nombre;
         private string apellidos;
@@ -23,10 +24,20 @@ namespace Model
             this.edad = edad;
         }
 
+        protected Persona(int id,string codigo, string nombre, string apellidos, string genero, int edad)
+        {
+            this.codigo = codigo;
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.genero = genero;
+            this.edad = edad;
+        }
+
         public string Codigo { get => codigo; set => codigo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellidos { get => apellidos; set => apellidos = value; }
         public string Genero { get => genero; set => genero = value; }
         public int Edad { get => edad; set => edad = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Cargo
+    public class Cargo
     {
+        private string descripcion;
+        private int condenaDias;
+
+        public Cargo(string descripcion, int condenaDias)
+        {
+            this.descripcion = descripcion;
+            this.condenaDias = condenaDias;
+        }
+
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public int CondenaDias { get => condenaDias; set => condenaDias = value; }
     }
 }

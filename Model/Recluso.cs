@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Recluso : Persona
+    public class Recluso : Persona
     {
-        private int tiempoCondena;
-        Expediente expediente;
+        private Expediente expediente;
 
+        public Recluso(string codigo, string nombre, string apellidos, string genero, int edad, Expediente expediente) : base(codigo, nombre, apellidos, genero, edad)
+        {
+            this.expediente = expediente;
+        }
+
+        public Recluso(int id, string codigo, string nombre, string apellidos, string genero, int edad, Expediente expediente) : base(id, codigo, nombre, apellidos, genero, edad)
+        {
+            this.expediente = expediente;
+        }
+
+        internal Expediente Expediente { get => expediente; set => expediente = value; }
     }
 }
